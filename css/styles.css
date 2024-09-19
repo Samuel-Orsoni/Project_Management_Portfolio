@@ -1,4 +1,5 @@
-﻿body {
+﻿/* General body styling */
+body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -6,43 +7,53 @@
     color: #333;
 }
 
+/* Styling for the navigation bar */
 header {
-    background-color: #333;
-    padding: 10px 0;
-    text-align: center;
+    position: fixed; /* Keeps it fixed even when scrolling */
+    top: 0;
+    right: 0;
+    background-color: #333; /* Dark background */
+    padding: 10px 20px;
+    z-index: 1000; /* Ensures the menu is always on top */
 }
 
+/* Styling the list in the navigation */
 nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
+    display: flex; /* Aligns items in a row */
 }
 
+    /* Individual list item (menu links) styling */
     nav ul li {
-        display: inline;
-        margin-right: 20px;
+        margin-right: 15px;
     }
 
+        /* Styling for the links */
         nav ul li a {
-            color: #fff;
-            text-decoration: none;
+            color: #fff; /* White text color */
+            text-decoration: none; /* Removes underline */
+            font-size: 16px;
+            transition: color 0.3s; /* Smooth transition on hover */
         }
 
-h1 {
-    color: #333;
-}
+            nav ul li a:hover {
+                color: #f4f4f4; /* Slightly lighter on hover */
+            }
 
+/* Make sure the rest of the content doesn't overlap the menu */
 section {
-    padding: 20px;
-    text-align: center;
+    padding-top: 60px; /* Adds space below the fixed menu */
 }
 
+/* Footer styling */
 footer {
     background-color: #333;
     color: #fff;
     text-align: center;
     padding: 10px 0;
-    position: fixed;
-    width: 100%;
+    position: relative;
     bottom: 0;
+    width: 100%;
 }
