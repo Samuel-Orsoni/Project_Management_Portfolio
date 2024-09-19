@@ -1,0 +1,7 @@
+# Ignore Visual Studio temporary files, build results, and
+# Windows image file caches
+.vs/
+*.user
+*.suo
+*.vspx
+*.vscode/
